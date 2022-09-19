@@ -1,0 +1,27 @@
+{
+  "name": "commerce",
+  "version": "1.0.0",
+  "description": "react-shop",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Misael-GC/commerce.git"
+  },
+  "keywords": [
+    "react",
+    "javascript"
+  ],
+  "author": "Misael Gómez Cuautle <misael.gomez1623@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Misael-GC/commerce/issues"
+  },
+  "homepage": "https://github.com/Misael-GC/commerce#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
