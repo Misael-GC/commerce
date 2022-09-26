@@ -1,17 +1,18 @@
 import React from 'react';
 import '../styles/Login.scss';
+import logo from '../../public/assets/logos/logo_yard_sale.svg';
 
 const Login = () => {
     return (
         <div className="login">
             <div className="form-container">
-                <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+                <img src={logo} alt="logo" className="logo" />
 
                 <h1 className="title">Create a new password</h1>
                 <p className="subtitle">Enter a new password for yue account</p>
 
-                <form action="/" classNameName="form">
-                    <label for="password" classNameName="label">Password</label>
+                <form action="/" className="form">
+                    <label for="password" className="label">Password</label>
                     <input type="password" id="password" placeholder="*********" classNameName="input input-password" />
 
                     <label for="new-password" className="label">Password</label>
