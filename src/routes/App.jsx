@@ -1,8 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Routes, } from 'react-router-dom';
 import Layout from '../containers/Layout';
 import Login from '../containers/Login';
 import Recoverypassword from '../containers/RecoveryPassword';
+import Home from '../pages/Home';
+import NotFound from '../pages/NotFound';
 import '../styles/global.css';
 
 const App = () => {

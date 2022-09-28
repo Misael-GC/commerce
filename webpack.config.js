@@ -62,7 +62,7 @@ module.exports = {
     ],
     devServer: {
         allowedHosts: path.join(__dirname, 'dist'), // contentBase corresponde a webpack 4, ahora en Webpack 5 se usa allowedHosts
-        port: 3005,
+        port: 3000,
         compress: true,
     }
 }
