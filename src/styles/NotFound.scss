@@ -24,14 +24,17 @@
     font-size: 130px;
 	animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
+ 
 .home-page-link {
-    color: black;
+    color:aliceblue;
     text-decoration: none;
+    padding: 15px;
+    background-color: var(--black);
 }
 
 .text-shadow-pop-top {
     margin-top: 0px;
+    padding-bottom: 5px;
 	animation: text-shadow-pop-top 1s reverse both;
 }
 
