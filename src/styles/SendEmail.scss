@@ -12,7 +12,7 @@
 	width: 300px;
 	justify-items: center;
 }
-.logo {
+.SendEmail-logo {
 	width: 150px;
 	margin-bottom: 48px;
 	justify-self: center;
@@ -69,8 +69,8 @@
 	margin-top: 14px;
 	margin-bottom: 30px;
 }
-@media (max-width: 640px) {
-	.logo {
+@media (min-width: 640px) {
+	.SendEmail-logo {
 		display: block;
 	}
 }
