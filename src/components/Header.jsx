@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import '@styles/Header.scss';
+import Menu from '@components/Menu'
 import menu from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
 import shoppingCart from '@icons/icon_shopping_cart.svg';
 
 function Header() {
+
+  const [toogle, setToggle] = useState(false);
+
+  const handleToggle = () =>{
+    setToggle(!toogle); //lo va a cambiar a su inversa
+  };
+
   return (
     <nav>
       <img src={menu} alt="menu" className="menu" />
@@ -36,13 +44,16 @@ function Header() {
 
       <div className="navbar-right">
         <ul>
-          <li className="navbar-email">platzi@example.com</li>
+          <li className="navbar-email" onClick={handleToggle}>
+            platzi@example.com
+          </li>
           <li className="navbar-shopping-cart">
             <img src={shoppingCart} alt="shopping cart" />
             <div>2</div>
           </li>
         </ul>
       </div>
+      {toogle && <Menu/>}      {/* si toogle es false no se muestra */}
     </nav>
   );
 }
