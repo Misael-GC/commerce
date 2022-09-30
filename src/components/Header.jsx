@@ -10,7 +10,7 @@ function Header() {
   const [toogle, setToggle] = useState(false);
 
   const handleToggle = () =>{
-    setToggle(!toogle); //lo va a cambiar a su inversa
+    setToggle(prevToggle => !prevToggle); //lo va a cambiar a su inversa
   };
 
   return (
@@ -53,7 +53,7 @@ function Header() {
           </li>
         </ul>
       </div>
-      {toogle && <Menu/>}      {/* si toogle es false no se muestra */}
+      {toogle && <Menu/>}      {/* si toogle es true entonces se muestra */}
     </nav>
   );
 }
