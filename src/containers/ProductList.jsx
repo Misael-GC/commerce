@@ -13,7 +13,7 @@ const ProductList = () => {
 		<section className="main-container">
 			<div className="ProductList">
 				{products.map(product =>(
-					<ProductItem product={product} key={product.id}/>
+					<ProductItem product={product} key={product.id}/> /* aqui está el productList el cual escucha al custm hook y la API*/
 				))}
 			</div>
 		</section>

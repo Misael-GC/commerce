@@ -22,7 +22,7 @@ module.exports = {
             '@styles': path.resolve(__dirname, 'src/styles/'),
             '@icons':path.resolve(__dirname, 'src/assets/icons/'),
             '@logos':path.resolve(__dirname, 'src/assets/logos/'),
-            '@hooks':path.resolve(dirname, 'src/hooks/'),
+            '@hooks':path.resolve(__dirname, 'src/hooks/'),
         }
     },
     module: { // loaders para cada tipo de archivo
