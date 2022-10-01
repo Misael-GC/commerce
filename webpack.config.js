@@ -2,6 +2,7 @@ const path = require('path'); //path del proyecto principal
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //traemos el plugin
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { Component } = require('react');
+const { dirname } = require('path');
 //de html
 
 module.exports = {
@@ -21,6 +22,7 @@ module.exports = {
             '@styles': path.resolve(__dirname, 'src/styles/'),
             '@icons':path.resolve(__dirname, 'src/assets/icons/'),
             '@logos':path.resolve(__dirname, 'src/assets/logos/'),
+            '@hooks':path.resolve(dirname, 'src/hooks/'),
         }
     },
     module: { // loaders para cada tipo de archivo
