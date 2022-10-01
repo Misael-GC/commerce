@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/ProductItem.scss';
-import add from '@icons/bt_add_to_cart.svg';
+import addCart from '@icons/bt_add_to_cart.svg';
+
+
 const ProductItem = ({product}) => {
 	const [cart, setCart] = useState([]);
 
@@ -17,7 +19,7 @@ const ProductItem = ({product}) => {
 					<p>{product.title}</p>
 				</div>
 				<figure onClick={handleClick}>
-					<img src={add} alt="add" />
+					<img src={addCart} alt="addCart" />
 				</figure>
 				{cart}
 			</div>
