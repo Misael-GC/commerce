@@ -14,9 +14,12 @@ const MyOrder = () => {
 				<p className="title">My order</p>
 			</div>
 			<div className="my-order-content">
-				{state.cart.map(product => (
-					<OrderItem product={product} key={`orderItem-${product.id}`}/>
-				))}
+				{state.cart.length > 0 ?(
+					state.cart.map((product, index) => (
+					<OrderItem product={product} key={`orderItem-${index}-${product.id}`}/>
+				))
+				): (<div className="cart-empty"> No tienes productos Agregados ¯\_(ツ)_/¯ </div>)}
+				
 				<div className="order">
 					<p>
 						<span>Total</span>
