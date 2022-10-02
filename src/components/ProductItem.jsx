@@ -24,7 +24,6 @@ const ProductItem = ({product}) => {
 				<figure onClick={() => handleClick(product)}>
 					<img src={addCartImage} alt="addToCartImage" />
 				</figure>
-				
 			</div>
 		</div>
 	);

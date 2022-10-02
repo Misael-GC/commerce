@@ -5,16 +5,20 @@ import Menu from '@components/Menu'
 import menu from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
 import shoppingCart from '@icons/icon_shopping_cart.svg';
+import MyOrder from '../containers/MyOrder.jsx';
+
 
 function Header() {
 
+  const { state } = useContext(AppContext);
   const [toogle, setToggle] = useState(false);
+  const [toogleOrders, setToggleOrders] = useState(false);
+  
 
   const handleToggle = () =>{
     setToggle(prevToggle => !prevToggle); //lo va a cambiar a su inversa
   };
 
-  const { state } = useContext(AppContext);
 
   return (
     <nav>
@@ -50,13 +54,14 @@ function Header() {
           <li className="navbar-email" onClick={handleToggle}>
             platzi@example.com
           </li>
-          <li className="navbar-shopping-cart">
+          <li className="navbar-shopping-cart" onClick={() => setToggleOrders(!toogleOrders)}>
             <img src={shoppingCart} alt="shopping cart" />
             {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
           </li>
         </ul>
       </div>
       {toogle && <Menu/>}      {/* si toogle es true entonces se muestra */}
+      {toogleOrders && <MyOrder/>}
     </nav>
   );
 }
