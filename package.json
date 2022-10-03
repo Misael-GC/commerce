@@ -2,6 +2,7 @@
   "name": "commerce",
   "version": "1.0.0",
   "description": "react-shop",
+  "homepage": "https://misael-gc.github.io/commerce/",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/Misael-GC/commerce/issues"
   },
-  "homepage": "https://misael-gc.github.io/commerce/",
+  
   "dependencies": {
     "@babel/core": "^7.19.1",
     "@babel/plugin-transform-runtime": "^7.19.1",
