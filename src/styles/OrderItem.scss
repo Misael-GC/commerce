@@ -16,6 +16,15 @@
 	border-radius: 20px;
 	object-fit: cover;
 }
+
+.Close-x{
+	cursor: pointer;
+}
+.Close-x:hover{
+	filter: invert(59%) sepia(95%) saturate(404%) hue-rotate(77deg) brightness(94%) contrast(100%);
+	cursor: pointer;
+	-webkit-filter: invert(59%) sepia(95%) saturate(404%) hue-rotate(77deg) brightness(94%) contrast(100%);
+}
 .OrderItem p:nth-child(2) {
 	color: var(--very-light-pink);
 }
