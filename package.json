@@ -6,6 +6,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d dist",
     "start": "webpack serve --open",
     "build": "webpack --mode production"
   },
@@ -22,7 +24,6 @@
   "bugs": {
     "url": "https://github.com/Misael-GC/commerce/issues"
   },
-  
   "dependencies": {
     "@babel/core": "^7.19.1",
     "@babel/plugin-transform-runtime": "^7.19.1",
