@@ -22,7 +22,10 @@ const MyOrder = () => {
 			<div className="my-order-content">
 				{state.cart.length > 0 ?(
 					state.cart.map((product, index) => (
-					<OrderItem product={product} key={`orderItem-${index}-${product.id}`}/>
+					<OrderItem 
+					indexValue={index}
+					product={product} 
+					key={index}/>
 				))
 				): (<div className="cart-empty"> No tienes productos Agregados ¯\_(ツ)_/¯ </div>)}
 				
