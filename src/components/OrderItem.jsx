@@ -4,7 +4,6 @@ import close from '@icons/icon_close.png';
 import AppContext from '@context/AppContext'
 
 const OrderItem = ( props ) => {
-
 	const {product, indexValue } = props
 
 	const { removeFromCart } = useContext(AppContext);

@@ -8,7 +8,10 @@ const useInitialState = () => {
 //payload -> product
     const addToCart = (payload) =>{
         setState({
-            cart: [...state.cart, payload]//lo que está actualmen te en el array + el new product
+            ...state,
+            cart: state.cart.includes(payload)
+            ? state.cart//lo que está actualmen te en el array + el new product
+            : [...state.cart, payload]
         })
     }
 
