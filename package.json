@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/Misael-GC/commerce/issues"
   },
-  "homepage": "https://misael-gc.github.io/commerce/",
+  "homepage": "https://github.com/Misael-GC/commerce/",
   "dependencies": {
     "@babel/core": "^7.19.1",
     "@babel/plugin-transform-runtime": "^7.19.1",
