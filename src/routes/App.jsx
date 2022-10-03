@@ -15,11 +15,13 @@ import '../styles/global.css';
 import AppContext from '../context/AppContext';
 import useInitialState from '../hooks/useInitialState';
 
+//main rama
+
 const App = () => {
     const initialState = useInitialState();
     return (
         <AppContext.Provider value={initialState}>
-        <BrowserRouter basename='/commerce' >
+        <BrowserRouter >
             <Layout>
         <Routes>
                 <Route  path="/" element={<Home/>} />

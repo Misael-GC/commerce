@@ -10,7 +10,7 @@ module.exports = {
     output: { // lugar al que saldrán todos los archivos
         path: path.resolve(__dirname, 'dist'), //en nuestro path, crea la carpeta dist
         filename: 'bundle.js', // nombre del archivo js resultante
-        publicPath:'./',
+        publicPath:'/',
     },
     mode: 'development',
     resolve: { // extensión de archivos a tomar en cuenta
@@ -75,7 +75,7 @@ module.exports = {
     ],
     devServer: {
         allowedHosts: path.join(__dirname, 'dist'), // contentBase corresponde a webpack 4, ahora en Webpack 5 se usa allowedHosts
-        port: 3000,
+        port: 3006,
         compress: true,
         historyApiFallback: true,
     }

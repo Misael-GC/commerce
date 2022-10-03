@@ -4,19 +4,21 @@ import OrderItem from '../components/OrderItem';
 import '../styles/MyOrders.scss';
 import arrow from '@icons/flechita.svg'
 
-const MyOrder = () => {
+const MyOrder = ({ toggleOrders, setToggleOrders }) => {
 	const { state } = useContext(AppContext);
 
 	const sumTotal = () =>{
 		const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
 		const sum = state.cart.reduce(reducer, 0);
 		return sum;
-	}
+	};
 
 	return (
 		<aside className="MyOrder">
 			<div className="title-container">
-				<img src={arrow} alt="arrow" />
+				<img src={arrow} 
+				alt="arrow" 
+				onClick={() => setToggleOrders(toggleOrders)}/>
 				<p className="title">My order</p>
 			</div>
 			<div className="my-order-content">
