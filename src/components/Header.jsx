@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
 import AppContext from "@context/AppContext";
 import '@styles/Header.scss';
-import Menu from '@components/Menu'
+import Menu from '@components/Menu';
+// import MenuMobile from '@components/MenuMobile';
 import menu from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
 import shoppingCart from '@icons/icon_shopping_cart.svg';
@@ -13,11 +14,16 @@ function Header() {
   const { state } = useContext(AppContext);
   const [toogle, setToggle] = useState(false);
   const [toogleOrders, setToggleOrders] = useState(false);
+  // const [toogleMenuMobile, setToggleMenuMobile] = useState(false);
   
 
   const handleToggle = () =>{
     setToggle(prevToggle => !prevToggle); //lo va a cambiar a su inversa
   };
+
+  // const handleToggleMenuMobile = () => {
+  //   setToggleMenuMobile(!toggleMenuMobile);
+  // };
 
 
   return (
@@ -61,7 +67,7 @@ function Header() {
         </ul>
       </div>
       {toogle && <Menu/>}      {/* si toogle es true entonces se muestra */}
-      {toogleOrders && <MyOrder/>}
+      {toogleOrders && <MyOrder toogleOrders={toogleOrders} setToggleOrders={setToggleOrders}/>}
     </nav>
   );
 }
