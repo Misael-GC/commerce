@@ -1,33 +1,34 @@
 import React, { useState, useContext } from "react";
 import AppContext from "@context/AppContext";
-import '@styles/Header.scss';
 import Menu from '@components/Menu';
 import menu from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
 import shoppingCart from '@icons/icon_shopping_cart.svg';
 import MyOrder from '../containers/MyOrder.jsx';
-// import MenuMobile from '@components/MenuMobile';
+import MenuMobile from '../components/MenuMobile';
+import '@styles/Header.scss';
 
 function Header() {
 
   const { state } = useContext(AppContext);
   const [toogle, setToggle] = useState(false);
   const [toogleOrders, setToggleOrders] = useState(false);
-  // const [toogleMenuMobile, setToggleMenuMobile] = useState(false);
+  const [toogleMenuMobile, setToggleMenuMobile] = useState(false);
 
 
   const handleToggle = () =>{
     setToggle(prevToggle => !prevToggle); //lo va a cambiar a su inversa
   };
 
-   // const handleToggleMenuMobile = () => {
-  //   setToggleMenuMobile(!toggleMenuMobile);
-  // };
+   const handleToggleMenuMobile = () => {
+    setToggleMenuMobile(!toogleMenuMobile);
+    console.log("entra")
+  };
 
 
   return (
     <nav>
-      <img src={menu} alt="menu" className="menu" />
+      <img src={menu} alt="menu" className="menu" onClick={handleToggleMenuMobile}/>
 
       <div className="navbar-left">
         <img src={logo} alt="logo" className="nav-logo" />
@@ -67,6 +68,7 @@ function Header() {
       </div>
       {toogle && <Menu/>}      {/* si toogle es true entonces se muestra */}
       {toogleOrders && <MyOrder toogleOrders={toogleOrders} setToggleOrders={setToggleOrders}/>}
+      {toogleMenuMobile && <MenuMobile handleToggleMenuMobile={handleToggleMenuMobile}/>}
     </nav>
   );
 }
