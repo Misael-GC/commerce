@@ -18,7 +18,7 @@ const OrderItem = ( props ) => {
 			</figure>
 			<p>{product.title}</p>
 			<p>{product.price}</p>
-			<img src={close} alt="close"  onClick={() => handleRemove(indexValue)} className='Close-x'/>
+			<img className="pointer" src={close} alt="close"  onClick={() => handleRemove(indexValue)}/>
 		</div>
 	);
 }

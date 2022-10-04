@@ -17,10 +17,11 @@
 	object-fit: cover;
 }
 
-.Close-x{
+.Close{
 	cursor: pointer;
+	margin: 100px;
 }
-.Close-x:hover{
+.Close:hover{
 	filter: invert(59%) sepia(95%) saturate(404%) hue-rotate(77deg) brightness(94%) contrast(100%);
 	cursor: pointer;
 	-webkit-filter: invert(59%) sepia(95%) saturate(404%) hue-rotate(77deg) brightness(94%) contrast(100%);

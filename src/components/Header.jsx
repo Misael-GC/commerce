@@ -61,7 +61,7 @@ function Header() {
             platzi@example.com
           </li>
           <li className="navbar-shopping-cart" onClick={() => setToggleOrders(!toogleOrders)}>
-            <img src={shoppingCart} alt="shopping cart" />
+            <img src={shoppingCart} alt="shopping cart" className="pointer"/>
             {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
           </li>
         </ul>

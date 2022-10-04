@@ -17,6 +17,7 @@ const MyOrder = ({ toggleOrders, setToggleOrders }) => {
 		<aside className="MyOrder">
 			<div className="title-container">
 				<img src={arrow} 
+				className="pointer"
 				alt="arrow" 
 				onClick={() => setToggleOrders(toggleOrders)}/>
 				<p className="title">My order</p>
