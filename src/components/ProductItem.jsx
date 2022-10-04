@@ -5,9 +5,6 @@ import AppContext from '@context/AppContext';
 import addedToCartImage from '@icons/bt_added_to_cart.svg';
 
 
-
-
-
 const ProductItem = ({product}) => {
 	const {state, addToCart } = useContext(AppContext); //conexios -> checa App.jsx
 

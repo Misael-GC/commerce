@@ -1,10 +1,12 @@
 import { useState } from "react";
 
 const useInitialState = () => {
+
     const initialState = {
         cart:[],
     }
     const [state, setState] = useState(initialState);
+    
 //payload -> product
     const addToCart = (payload) =>{
         setState({
